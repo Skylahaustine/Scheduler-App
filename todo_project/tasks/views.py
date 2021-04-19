@@ -13,7 +13,7 @@ class TaskCreateView(LoginRequiredMixin, CreateView):
     template_name='task_new.html'
     fields= ('body' ,)
 
-class TaskDeleteView(LoginRequiredMixin, DeleteView):
+class TaskDeleteView(LoginRequiredMixin,  DeleteView):
     model= Tasks
     template_name='task_delete.html'
     success_url=reverse_lazy('task_list')
