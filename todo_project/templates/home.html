@@ -11,5 +11,9 @@ Hi {{ user.username }}! Welcome to My To Do app
 <a href="{% url 'login' %}">Log In</a> |
 <a href="{% url 'signup' %}">Sign Up</a>
 {% endif %}
-
+<h1>TaskApp</h1>
+<p class="lead">
+    <a href="{% url 'task_list' %}"
+    role="button">View All Articles</a>
+    </p>
 {%endblock content%}
