@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block title%}Delete{%endblock title%}
+
+{%block content%}
+<h2>Delete page</h2>
+
+<form action="" method="Post">{%csrf_token%}
+<p>Are you sure you want to delete task "{{tasks.body}}"?</p>
+<input type="submit" value="Confirm">
+
+</form>
+
+{%endblock content%}
