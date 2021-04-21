@@ -5,10 +5,15 @@
 {%block content%}
 <li><a href="{% url 'task_new' %}">+ New</a></li>
     {%for tasks in object_list%}
- <br>   {{tasks.date}}
-  <br>  {{tasks.body}} 
-  <a href="{% url 'task_edit' tasks.pk %}">Edit</a> |
-        <a href="{% url 'task_delete' tasks.pk %}">Delete</a>
+    
+<ul class="list-group">
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+      {{tasks.body}} | {{tasks.date}}  <a href="{% url 'task_edit' tasks.pk %}">Edit</a> |
+      <a href="{% url 'task_delete' tasks.pk %}">Delete</a>
+    </li>
+    </ul>
+  
 
 <br>
 
