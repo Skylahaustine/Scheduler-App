@@ -22,3 +22,6 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
     fields=('body',)
     template_name='task_edit.html'
 
+class TaskListViewCompleted(LoginRequiredMixin, ListView):
+    model=Tasks
+    template_name='task_completed.html'
